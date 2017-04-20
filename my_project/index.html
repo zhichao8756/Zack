@@ -1,0 +1,1222 @@
+<!doctype html><html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>VGtime游戏时光</title>
+		<link rel="stylesheet" href="common.css">
+ </head>
+ <body>
+ 	<!--登录框 -->
+	<div id="login">
+		<div class="arrow1">
+			<img src="images/psign.png" alt=""/>
+		</div>
+	</div>
+	<div class="login_main " style="">
+		<h2>我的游戏时光</h2>
+		<p>账号</p>
+		<i></i>
+		<form action="">
+			<input type="text" required  id="uname" name="user_name" class="common" 				placeholder="请输入账号">
+			<p style="margin:50px 0px 5px 100px;font-size:16px;">密码</p>
+			<input type="password" id="upwd" name="user_pwd" class="common" required 				placeholder="8位以上字母或数字"/>
+			<div id="btn">
+				<p>
+					<span>记住我</span>
+					<a href="#" >
+						<i></i>
+						<b class="open"></b>
+						<b class="close"></b>
+					</a>
+				</p>
+			</div>
+			<input type="button" value="登录" id="btn2"/>
+		</form>
+		<a href="">
+			<p class="remember">忘记密码?</p>
+		</a>
+		<div class="login_line">
+			<span>or</span>
+		</div>
+		<div class="other">
+			<a href="#">
+				<i></i>
+			</a>
+			<a href="#" style="background-color: #ff5d59">
+				<i></i>
+			</a>
+			<a href="#" style="background-color:#13dc9c ">
+				<i></i>
+			</a>
+		</div>
+		<div class="zhuce">
+			<p>还没注册游戏时光账号？</p>
+			<a href="#" id="a1">现在注册</a>
+		</div>
+	</div>
+	<!--注册页面 -->
+	<div class="regist_main" style="display: none">
+		<h2>使用手机、邮箱注册</h2>
+		<form id="form1">
+			<p>手机或邮箱</p>
+			<span>这是您的登录账号</span>
+			<i class="icon1"></i>
+			<input type="text" name="uname"/>
+			<!-- 验证正确小标签-->
+			<b></b>
+			<p>验证码</p>
+			<span>确认您的身份</span>
+			<i class="icon2"></i>
+			<input type="text" name="upwd_pass" class="special_upwd"/>
+			<span class="get_pwd">获取验证码</span>
+			<p>密码</p>
+			<span>请输入8位以上字母或数字</span>
+			<i class="icon3"></i>
+			<input type="password" name="upwd"/>
+			<!-- 验证正确小标签-->
+			<b style="top:250px;"></b>
+			<p>密码</p>
+			<span>请再输入一次密码</span>
+			<i class="icon4"></i>
+			<input type="password" name="passAgain" />
+			<input type="button" id="btn3" value="提交"/>
+			<span style="color:#e4393c;display:none;" class="same">两次密码输入不一致</span>
+			<!-- vali属性用于jquery查找，无实际意义-->
+			<b class="vali" style="top:340px;"></b>
+		</form>
+		<!-- js动态获取元素-->
+		<div class="txt_lose txt_blur1">用户名必须是邮箱或者手机号</div>
+		<div class="check_name"></div>
+		<div class="txt_lose txt_blur2 ">密码是在8-16位</div>
+
+
+		<div class="line1"></div>
+		<h3>已经有游戏时光账号？</h3>
+		<a href="#" class="login">登录</a>
+		<h4>创建帐号表示您已经阅读并同意了我们的</h4>
+		<a href="#" class="xieyi">注册协议</a>
+	</div>
+  <!--网页头部-->
+	<header id="top">
+	<!--网站logo-->
+		<img src="images/logo_top.png" alt="">
+		<img src="images/search_02.png" alt="">
+		<!--文字列表右-->
+		<ul class="rf" >
+			<li>
+				<a href="#">首页</a>
+			</li>
+			<li>
+				<b></b><!--边框-->
+				<a href="#">游戏</a>
+			</li>
+			<li>
+				<a href="#">攻略</a>
+			</li>
+			<li>
+				<a href="#">视频</a>
+			</li>
+			<li class="main_topic">
+				<a href="#">
+					专题
+				</a>
+				<!--设置专题弹出页面-->
+				<div id="topic_pop" style="font-weight:normal">
+					<ul class="lf">
+						<li class="lanmu" style="font-weight:bold">VG栏目<li>
+						<li>
+							<a href="">VG人物</a>
+						</li>
+						<li>
+							<a href="">VG圆桌会</a>
+						</li>
+						<li>
+							<a href="">VG解密</a>
+						</li>
+						<li >
+							<a href="">VG好消息</a>
+						</li>
+						<li>
+							<a href="">VG盘点</a>
+						</li>
+						<li>
+							<a href="">一周热点</a>
+						</li>
+						<li>
+							<a href="">小编夜时光</a>
+						</li>
+						<li>
+							<a href="">铁拳T档案</a>
+						</li>
+					</ul>
+					<ul class="rf">
+						<li class="zhuanti" style="font-weight:bold">游戏专题</li>
+						<li>
+							<a href="">TGS2015</a>
+						</li>
+						<li>
+							<a href="">UCG大赏</a>
+						</li>
+						<li>
+							<a href="">战争机器</a>
+						</li>
+						<li>
+							<a href="">潜龙谍影</a>
+						</li>
+						<li>
+							<a href="">古墓丽影:崛起</a>
+						</li>
+						<li>
+							<a href="">辐射4</a>
+						</li>
+						<li>
+							<a href="">生化危机二十周年专题</a>
+						</li> 
+						<li>
+							<a href="">神秘海域</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="community">
+				<a href="#">
+					社区
+				</a>
+				<!--设置社区弹出菜单-->
+				<div id="community_pop" style="font-weight:normal" >
+					<ul> 
+						<li>
+							<a href="">现在加入UP Team!</a>
+						</li>
+						<li>
+							<a href="">综合讨论区</a>
+						</li>
+						<li>
+							<a href="">潜龙谍影V幻痛</a>
+						</li>
+						<li>
+							<a href="">怪物猎人X</a>
+						</li>
+						<li>
+							<a href="">PS4讨论区</a>
+						</li>
+						<li>
+							<a href="">Steam讨论区</a>
+						</li>
+						<li>
+							<a href="">XONE讨论区</a>
+						</li>
+						<li>	
+							<a href="">PSV讨论区</a>
+						</li>
+						<li>
+							<a href="">投诉意见</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="pick">
+				<b></b><!--边框-->
+				<a href="#">主机分类</a>
+				<!--主机分类弹出菜单-->
+				<div id="pick_pop" style="font-weight:normal">
+					<ul>
+						<li>
+							<a href="">PS4</a>
+						</li>
+						<li>
+							<a href="">XB1</a>
+						</li>
+						<li>
+							<a href="">WiiU</a>
+						</li>
+						<li>
+							<a href="">3DS</a>
+						</li>
+						<li>
+							<a href="">PSV</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="appli">
+				<b></b><!--边框-->
+				<a href="#">APP</a>
+				<!--app弹出菜单-->
+				<div id="appli_pop" style="font-weight:normal">
+					<ul>
+						<li  class="move-in-left">VGtime APP</li>
+						<li>UCG APP</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</header>
+	<!--banner广告部分-->
+	<div id="banner" class="clear">
+		<div class="slide_img">
+			<ul class="lf">
+				<li>
+					<img src="images/170215100719354.jpg" alt="">
+					<!--图片小标签-->
+					<span class="img2"></span>
+					<h1>《仁王》一场潇洒不羁的战斗</h1>
+					<p>无限落命，是否有一种砸手柄的冲动</p>
+				</li>
+				<li>
+					<img src="images/170214100240947.jpg" alt=""/>
+					<span class="img2"></span>
+					<h1>《塞尔达传说:荒野之息》评测:</h1>
+					<p>电子游戏又一座里程碑</p>
+				</li>
+				<li>
+					<img src="images/170215133255949.jpg" alt=""/>
+					<span class="img2"></span>
+					<h1>steam黑色星期五,又一轮新的打折风暴</h1>
+					<p>你准备好剁手了吗</p>
+				</li>
+				<li>
+					<img src="images/170216105007256.jpg" alt=""/>
+					<span class="img2"></span>
+					<h1>《最后的守护者》:异世界的冒险</h1>
+					<p>感人至深的凄凉故事</p>
+				</li>
+				<li>
+					<img src="images/170216105111346.jpg" alt=""/>
+					<span class="img2"></span>
+					<h1>《生化危机7》:开启生化故事新篇章</h1>
+					<p>历代剧情，你最喜欢哪一部？</p>
+				</li>
+			</ul>
+
+		</div>
+
+	<!--左侧nav导航-->
+		<div id="nav" class="lf">
+			<div>
+				<a href="">登录</a>
+				<b></b>
+				<a href="" class="zhuce">注册</a>
+				<div class="pic"></div>
+			</div>
+			<ul>
+				<li>发售</li>
+				<li>30</li>
+				<li>发售</li>
+				<li>26</li>
+				<li>发售</li>
+				<li>24</li>
+				<li>发售</li>
+				<li>19</li>
+				<li>发售</li>
+				<li>30</li>
+			</ul>
+		</div>
+	</div>
+	<!--页面主体-->
+	<section id="main" class="clear">
+		<p>热门游戏 more</p>	
+		<div class="line"></div>
+		<div id="main_pic" class="clear">
+			<div>
+				<a href="">
+					<img src="images/16072615041281.jpg" alt="">
+					<span>如龙6 命之诗</span>
+					<b>8.9</b>
+					<p class="shadow"></p>
+				</a>
+			</div>
+			<div>
+				<a href="">
+					<img src="images/150916110353317.jpg" alt="">
+					<span>王国之心HD 2.8</span>
+					<b>9.2</b>
+					<p class="shadow"></p>
+				</a>
+			</div>
+			<div>
+				<a href="">
+					<img src="images/160513154855841.jpg" alt="">
+					<span>返校</span>
+					<b>7.9</b>
+					<p class="shadow"></p>
+				</a>
+			</div>
+			<div >
+				<a href="">
+					<img src="images/160614060241938.jpg" alt="">
+					<span>丧失围城4 </span>
+					<b>8.4</b>
+					<p class="shadow"></p>
+				</a>
+			</div>
+			<div>
+				<a href="">
+					<img class="down_pic" src="images/160714140834929.jpg" alt="">
+					<span>战国无双 真天丸</span>
+					<b style="z-index:25">8.9</b>
+					<p class="shadow"></p>
+				</a>
+			</div>
+			<div>
+				<a href="">
+					<img class="down_pic" src="images/161031151127516.jpg" alt="">
+					<span>最终幻想15</span>
+					<b style="z-index:25">8.7</b>
+					<p class="shadow"></p>
+				</a>
+			</div>
+			<div>
+				<a href="">
+					<img class="down_pic"src="images/161102132010948.jpg" alt="">
+					<span>尼尔 机械军团</span>
+					<b style="width:60px;z-index:25" >即将发售</b>
+					<p class="shadow"></p>
+				</a>
+			</div>
+			<div>
+				<a href="">
+					<img class="down_pic" src="images/170103145741296.jpg" alt="">
+					<span>重力异想世界</span>
+					<b style="z-index:25">9.4</b>
+					<p class="shadow"></p>
+				</a>
+			</div>
+		</div>
+<!--评测框  -->
+	<div id="p75" class="clear" >
+		<div id="pingce" class=" container">
+			<h1>
+				评测 more
+			</h1>
+			<div id="test">
+				<div id="color_line">	
+				</div>
+			</div>
+			<div id="d1" class="clear">
+				<div class="test_pic">
+					<img src="images/170222110707560.jpg" alt="">
+					<span>《荣耀战魂》评测:开辟格斗游戏新天地</span>
+					<b></b>
+				</div>
+				<div class="test_pic1">
+					<img src="images/170220160309972.jpg" alt="">
+					<b></b>
+					<span>《地平线：零之曙光》评测：科技到底是福是祸</span>
+				</div>
+				<div class="test_pic2">
+					<img src="images/170215100719354 (2).jpg" alt="">
+					<b></b>
+					<span>《仁王》评测：一场潇洒不羁的才情挥洒</span>
+				</div>
+				<div class="test_pic3">
+					<img src="images/170220105448836.jpg" alt="">
+					<b></b>
+					<span>《光环战争2》评测：不是最好的那个，但还是最特别的那个</span>
+				</div>
+		</div>
+		</div>
+		<div id="news" class="container">
+			<h1>
+				新闻 more
+			</h1>
+			<div id="test" style="width:520px">
+				<div id="color_line1">
+				</div>
+			</div>
+		</div>
+		<div id="d2">
+			<div id="d3" class="shadow">
+				<a href="#">
+					<div class="news_pic">
+						<img src="images/170307181834554.jpg" alt="">
+						<b></b>
+					</div>
+				</a>
+				<a href="#">
+					<span>难得有一款战棋游戏，可是它又一次延期了</span>
+				</a>
+				<p>2017-03-07 18:18:36</p>
+				</div>
+			<div id="d4" class="shadow">
+				<a href="#">
+					<div class="news_pic">
+						<img src="images/170307174104174.jpg" alt="">
+						<b></b>
+					</div>
+				</a>
+				<a href="#">
+					<span>《质量效应 仙女座》试玩将有剧情进度限制</span>
+				</a>
+				<p>2017-03-07 18:18:36</p>
+			</div>
+			<div id="d5" class="shadow">
+					<a href="#">
+					<div class="news_pic">
+						<img src="images/170307120607772.jpg" alt="">
+						<b></b>
+					</div>
+				</a>
+				<a href="#">
+					<span>9分 欧美媒体挺吃《尼尔 机械军团》这一套</span>
+				</a>
+				<p>2017-03-07 18:18:36</p>
+			</div>
+			<div id="d6" class="shadow">
+					<a href="#">
+					<div class="news_pic">
+						<img src="images/170307115925587.jpg" alt="">
+						<b></b>
+					</div>
+				</a>
+				<a href="#">
+					<span>在美国，Switch已经刷新了任天堂的历史纪录</span>
+				</a>
+				<p>2017-03-07 18:18:36</p>
+			</div>
+			<div id="d7" class="shadow">
+					<a href="#">
+					<div class="news_pic">
+						<img src="images/170307115306176.jpg" alt="">
+						<b></b>
+					</div>
+				</a>
+				<a href="#">
+					<span>《逃生2》发售日确定 4月吓到爆炸</span>
+				</a>
+				<p>2017-03-07 18:18:36</p>
+			</div>
+			<div id="d8" class="shadow">
+					<a href="#">
+					<div class="news_pic">
+						<img src="images/170307115053141.jpg" alt="">
+						<b></b>
+					</div>
+				</a>
+				<a href="#">
+					<span>腾讯TGP宣布下架手游页游 全力主推PC游戏</span>
+				</a>
+				<p>2017-03-07 18:18:36</p>
+			</div>
+		 </div>
+		 <div id="gonglue">
+			<div id="gonglue1">
+				<h2>攻略</h2>
+				<div id="test" style="width:295px;background-color:#C0C0C2">
+					<div id="color_line" class="special container"></div>
+				</div>
+			</div>
+			<ul id="gonglue2">
+				<li>
+					<div>
+						<img src="images/170124133044867.jpg" alt="">
+						<span><b>《生化危机7》全流程通关视频</b></span>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="images/170120175950165.jpg" alt="">
+						<span><b>《重力异想世界2》全支线攻略(更新完结)</b></span>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="images/170118115130393.jpg" alt="">
+						<span><b>《重力异想世界2》上手指南+系统详解</b></span>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="images/170118103513162.jpg" alt="">
+						<span><b>《重力异想世界2》全要素收集攻略</b></span>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="images/170213110249670.jpg" alt="">
+						<span><b>《仁王》全武器收集攻略</b></span>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="images/170303171707760.jpg" alt="">
+						<span><b>《尼尔：机械纪元》全流程通关攻略</b></span>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="images/170227114222125.jpg" alt="">
+						<span><b>《仁王》全流程通关攻略</b></span>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="images/170303171707760.jpg" alt="">
+						<span><b>《尼尔：机械纪元》全流程通关攻略</b></span>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="images/170118103513162.jpg" alt="">
+						<span><b>《重力异想世界2》全要素收集攻略</b></span>
+					</div>
+				</li>
+				<li>
+			</ul>
+		 </div>
+			<div id="view" class="lf container" style="margin-top:35px">
+				<h1>前瞻 more</h1>
+				<div id="test">
+					<div id="color_line"></div>
+				</div>			
+			</div>
+			<div id="d10" class="lf">
+				<div class="test_pic">
+					<img src="images/170222110707560.jpg" alt="">
+					<span>《荣耀战魂》评测:开辟格斗游戏新天地</span>
+					<b></b>
+				</div>
+				<div class="test_pic1">
+					<img src="images/170220160309972.jpg" alt="">
+					<b></b>
+					<span>《地平线：零之曙光》评测：科技到底是福是祸</span>
+				</div>
+				<div class="test_pic2">
+					<img src="images/170215100719354 (2).jpg" alt="">
+					<b></b>
+					<span>《仁王》评测：一场潇洒不羁的才情挥洒</span>
+				</div>
+				<div class="test_pic3">
+					<img src="images/170220105448836.jpg" alt="">
+					<b></b>
+					<span>《光环战争2》评测：不是最好的那个，但还是最特别的那个</span>
+				</div>
+			</div>
+			<div id="d11">
+					<div id="d3" class="shadow">
+				<a href="#">
+					<div class="news_pic">
+						<img src="images/170307181834554.jpg" alt="">
+						<b></b>
+					</div>
+				</a>
+				<a href="#">
+					<span>难得有一款战棋游戏，可是它又一次延期了</span>
+				</a>
+				<p>2017-03-07 18:18:36</p>
+				</div>
+			<div id="d4" class="shadow">
+				<a href="#">
+					<div class="news_pic">
+						<img src="images/170307174104174.jpg" alt="">
+						<b></b>
+					</div>
+				</a>
+				<a href="#">
+					<span>《质量效应 仙女座》试玩将有剧情进度限制</span>
+				</a>
+				<p>2017-03-07 18:18:36</p>
+			</div>
+			<div id="d5" class="shadow">
+					<a href="#">
+					<div class="news_pic">
+						<img src="images/170307120607772.jpg" alt="">
+						<b></b>
+					</div>
+				</a>
+				<a href="#">
+					<span>9分 欧美媒体挺吃《尼尔 机械军团》这一套</span>
+				</a>
+				<p>2017-03-07 18:18:36</p>
+			</div>
+			<div id="d6" class="shadow">
+					<a href="#">
+					<div class="news_pic">
+						<img src="images/170307115925587.jpg" alt="">
+						<b></b>
+					</div>
+				</a>
+				<a href="#">
+					<span>在美国，Switch已经刷新了任天堂的历史纪录</span>
+				</a>
+				<p>2017-03-07 18:18:36</p>
+			</div>
+			<div id="d7" class="shadow">
+					<a href="#">
+					<div class="news_pic">
+						<img src="images/170307115306176.jpg" alt="">
+						<b></b>
+					</div>
+				</a>
+				<a href="#">
+					<span>《逃生2》发售日确定 4月吓到爆炸</span>
+				</a>
+				<p>2017-03-07 18:18:36</p>
+			</div>
+			<div id="d8" class="shadow">
+					<a href="#">
+					<div class="news_pic">
+						<img src="images/170307115053141.jpg" alt="">
+						<b></b>
+					</div>
+				</a>
+				<a href="#">
+					<span>腾讯TGP宣布下架手游页游 全力主推PC游戏</span>
+				</a>
+				<p>2017-03-07 18:18:36</p>
+			</div>
+			</div>
+		</div>
+	 </div>
+	<div id="video">
+		<div class="video_bar">
+			<p class="lf">
+				<b></b>
+				VG视频</p>
+		</div>
+		<div class="video_pic">
+			<img src="images/170313002435835.jpg" alt="">
+			<h2>《超级机器人大战v》评测：死地求生</h2>
+			<b>原创</b>
+			<img src="images/170307121142676.jpg" alt="" style="left:250px">
+			<h2 style="left:270px;top:115px;width:220px;">汤勺吃面条的艺术——主机版即时战略游戏史</h2>
+			<b style="left:300px;">原创</b>
+			<img src="images/170311105922240.jpg" alt="" style="left:500px;">
+			<h2 style="left:520px;top:115px;width:230px;">《最终幻想15王者之剑》 一部不应被忽视情节的CG大作</h2>
+			<b style="left:550px;">预告片</b>
+			<img src="images/170312022559197.jpg" alt="" style="left:750px;"/>
+			<h2 style="left:765px;width:210px;top:115px;">游戏时光本周热门：玩了一周《荒野之息》，怎么评价它？</h2>
+			<b style="left:790px;">预告片</b>
+		</div>
+		<div id="paihang">
+				<div class="paihang1">
+				  <b></b>
+				  <p>热门视频排行</p>
+				</div>
+				<ul>
+						<li>
+								<div class="arrow">
+										<div>1</div>
+										<p></p>
+								</div>
+								<span>2016年游戏展望</span>
+						</li>
+						<li>
+								<div class="arrow">
+										<div>2</div>
+										<p></p>
+								</div>
+								<span>
+										2016年终策划——同行
+								</span>
+						</li>
+						<li>
+								<div class="arrow">
+										<div>3</div>
+										<p></p>
+								</div>
+								<span>
+										《血源诅咒》最速挑战
+								</span>
+						</li>
+						<li>
+								<div class="arrow" >
+										<div style="background-color:#C8C2BE">4</div>
+										<p style="border-left:22px solid #C8C2BE;"></p>
+								</div>
+								<span>2016年城会玩集合</span>
+						</li>
+						<li>
+								<div class="arrow">
+										<div style="background-color:#C8C2BE">5</div>
+										<p style="border-left:22px solid #C8C2BE;"></p>
+								</div>
+								<span>2016新游月谈2月番</span>
+						</li>
+						<li>
+								<div class="arrow">
+										<div style="background-color:#C8C2BE">6</div>
+										<p style="border-left:22px solid #C8C2BE;"></p>
+								</div>
+								<span>劳拉与贝拉的荒野求生</span>
+						</li>
+						<li>
+								<div class="arrow">
+										<div style="background-color:#C8C2BE">7</div>
+										<p style="border-left:22px solid #C8C2BE;"></p>
+								</div>
+								<span>游戏bug大集锦</span>
+						</li>
+						<li>
+								<div class="arrow">
+										<div style="background-color:#C8C2BE">8</div>
+										<p style="border-left:22px solid #C8C2BE;"></p>
+								</div>
+								<span>hololens让你重新认识新世界</span>
+						</li>
+						<li>
+								<div class="arrow">
+										<div style="background-color:#C8C2BE">9</div>
+										<p style="border-left:22px solid #C8C2BE;"></p>
+								</div>
+								<span>这可能是当今最好的竞速游戏了</span>
+						</li>
+						<li>
+								<div class="arrow">
+										<div style="background-color:#C8C2BE">10</div>
+										<p style="border-left:22px solid #C8C2BE;"></p>
+								</div>
+								<span>《潜龙谍影5：幻痛》真结局中文</span>
+						</li>
+				</ul>
+		</div>
+		<div class="video1 clear">
+				<div class="lf">
+						<img src="images/170314171659320.jpg" alt=""/>
+				</div>
+				<div class="bgColor">
+						<h2 class="lf">《夏日课堂》实体版发售日确定 包含所有DLC</h2>
+						<span >2017-2-16 11:07</span>
+						<b></b>
+				</div>
+		</div>
+		<div class="video1 clear " style="margin-left:100px;">
+			<div class="lf">
+				<img src="images/170314154758978.jpg" alt=""/>
+			</div>
+			<div class="bgColor">
+				<h2 class="lf">《地平线 零之曙光》销量突破260万 扩展包开发中</h2>
+				<span >2017-2-16 11:07</span>
+				<b></b>
+			</div>
+		</div>
+		<div class="video1 clear ">
+			<div class="lf">
+				<img src="images/170314150544967.jpg" alt=""/>
+			</div>
+			<div class="bgColor">
+				<h2 class="lf">Steam周末特惠：2K折扣周，《恐怖黎明》5折</h2>
+				<span >2017-2-16 11:07</span>
+				<b></b>
+			</div>
+		</div>
+		<div class="video1 clear " style="margin-left:100px;">
+			<div class="lf">
+				<img src="images/170314115422413.jpg" alt=""/>
+			</div>
+			<div class="bgColor">
+				<h2 class="lf">2016年主机市场分析：索尼占据半壁河山</h2>
+				<span >2017-2-16 11:07</span>
+				<b></b>
+			</div>
+		</div>
+		<div class="video1 clear " >
+			<div class="lf">
+				<img src="images/170314112523295.jpg" alt=""/>
+			</div>
+			<div class="bgColor">
+				<h2 class="lf">2016年主机市场分析：索尼占据半壁河山</h2>
+				<span >2017-2-16 11:07</span>
+				<b></b>
+			</div>
+		</div>
+		<div class="video1 clear " style="margin-left:100px ">
+			<div class="lf">
+				<img src="images/170317105702175.jpg" alt=""/>
+			</div>
+			<div class="bgColor">
+				<h2 class="lf">《莎木3》公布新影像 QTE判定依旧严格</h2>
+				<span >2017-2-16 11:07</span>
+				<b></b>
+			</div>
+		</div>
+	</div>
+		<div id="culture">
+			<div class="video_bar">
+				<p class="lf">
+					<b></b>
+					游戏文化</p>
+			</div>
+			<div class="video_pic">
+				<img src="images/170228110240288.jpg" alt="">
+				<h2>《超级机器人大战v》评测：死地求生</h2>
+				<b>原创</b>
+				<img src="images/17011315401782.png" alt="" style="left:250px">
+				<h2 style="left:270px;top:115px;width:220px;">汤勺吃面条的艺术——主机版即时战略游戏史</h2>
+				<b style="left:300px;">原创</b>
+				<img src="images/150616081007771.jpg" alt="" style="left:500px;">
+				<h2 style="left:520px;top:115px;width:230px;">《最终幻想15王者之剑》 一部不应被忽视情节的CG大作</h2>
+				<b style="left:550px;">预告片</b>
+				<img src="images/150708113828404.jpg" alt="" style="left:750px;"/>
+				<h2 style="left:765px;width:210px;top:115px;">游戏时光本周热门：玩了一周《荒野之息》，怎么评价它？</h2>
+				<b style="left:790px;">预告片</b>
+			</div>
+			<div class="video1 clear">
+				<div class="lf">
+					<img src="images/170314171659320.jpg" alt=""/>
+				</div>
+				<div class="bgColor">
+					<h2 class="lf">《夏日课堂》实体版发售日确定 包含所有DLC</h2>
+					<span >2017-2-16 11:07</span>
+					<b></b>
+				</div>
+			</div>
+			<div class="video1 clear " style="margin-left:100px;">
+				<div class="lf">
+					<img src="images/170314154758978.jpg" alt=""/>
+				</div>
+				<div class="bgColor">
+					<h2 class="lf">《地平线 零之曙光》销量突破260万 扩展包开发中</h2>
+					<span >2017-2-16 11:07</span>
+					<b></b>
+				</div>
+			</div>
+			<div class="video1 clear ">
+				<div class="lf">
+					<img src="images/170314150544967.jpg" alt=""/>
+				</div>
+				<div class="bgColor">
+					<h2 class="lf">Steam周末特惠：2K折扣周，《恐怖黎明》5折</h2>
+					<span >2017-2-16 11:07</span>
+					<b></b>
+				</div>
+			</div>
+			<div class="video1 clear " style="margin-left:100px;">
+				<div class="lf">
+					<img src="images/170314115422413.jpg" alt=""/>
+				</div>
+				<div class="bgColor">
+					<h2 class="lf">2016年主机市场分析：索尼占据半壁河山</h2>
+					<span >2017-2-16 11:07</span>
+					<b></b>
+				</div>
+			</div>
+			<div class="video1 clear " >
+				<div class="lf">
+					<img src="images/170314112523295.jpg" alt=""/>
+				</div>
+				<div class="bgColor">
+					<h2 class="lf">2016年主机市场分析：索尼占据半壁河山</h2>
+					<span >2017-2-16 11:07</span>
+					<b></b>
+				</div>
+			</div>
+			<div class="video1 clear " style="margin-left:100px ">
+				<div class="lf">
+					<img src="images/170317105702175.jpg" alt=""/>
+				</div>
+				<div class="bgColor">
+					<h2 class="lf">《莎木3》公布新影像 QTE判定依旧严格</h2>
+					<span >2017-2-16 11:07</span>
+					<b></b>
+				</div>
+			</div>
+		</div>
+		<div id="paihang_ps4">
+			<div class="paihang1">
+				<b></b>
+				<p>热门PS4游戏</p>
+			</div>
+			<ul>
+				<li>
+					<div class="arrow">
+						<div>1</div>
+						<p></p>
+					</div>
+					<span>2016年游戏展望</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div>2</div>
+						<p></p>
+					</div>
+								<span>
+										2016年终策划——同行
+								</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div>3</div>
+						<p></p>
+					</div>
+								<span>
+										《血源诅咒》最速挑战
+								</span>
+				</li>
+				<li>
+					<div class="arrow" >
+						<div style="background-color:#C8C2BE">4</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>2016年城会玩集合</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div style="background-color:#C8C2BE">5</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>2016新游月谈2月番</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div style="background-color:#C8C2BE">6</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>劳拉与贝拉的荒野求生</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div style="background-color:#C8C2BE">7</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>游戏bug大集锦</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div style="background-color:#C8C2BE">8</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>hololens让你重新认识新世界</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div style="background-color:#C8C2BE">9</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>这可能是当今最好的竞速游戏了</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div style="background-color:#C8C2BE">10</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>《潜龙谍影5：幻痛》真结局中文</span>
+				</li>
+			</ul>
+		</div>
+		<div id="gonglue4">
+		<div class="video_bar">
+			<p class="lf">
+				<b></b>
+				游戏文化</p>
+		</div>
+		<div class="video_pic">
+			<img src="images/170228110240288.jpg" alt="">
+			<h2>《超级机器人大战v》评测：死地求生</h2>
+			<b>原创</b>
+			<img src="images/17011315401782.png" alt="" style="left:250px">
+			<h2 style="left:270px;top:115px;width:220px;">汤勺吃面条的艺术——主机版即时战略游戏史</h2>
+			<b style="left:300px;">原创</b>
+			<img src="images/150616081007771.jpg" alt="" style="left:500px;">
+			<h2 style="left:520px;top:115px;width:230px;">《最终幻想15王者之剑》 一部不应被忽视情节的CG大作</h2>
+			<b style="left:550px;">预告片</b>
+			<img src="images/150708113828404.jpg" alt="" style="left:750px;"/>
+			<h2 style="left:765px;width:210px;top:115px;">游戏时光本周热门：玩了一周《荒野之息》，怎么评价它？</h2>
+			<b style="left:790px;">预告片</b>
+		</div>
+		<div class="video1 clear">
+			<div class="lf">
+				<img src="images/170314171659320.jpg" alt=""/>
+			</div>
+			<div class="bgColor">
+				<h2 class="lf">《夏日课堂》实体版发售日确定 包含所有DLC</h2>
+				<span >2017-2-16 11:07</span>
+				<b></b>
+			</div>
+		</div>
+		<div class="video1 clear " style="margin-left:100px;">
+			<div class="lf">
+				<img src="images/170314154758978.jpg" alt=""/>
+			</div>
+			<div class="bgColor">
+				<h2 class="lf">《地平线 零之曙光》销量突破260万 扩展包开发中</h2>
+				<span >2017-2-16 11:07</span>
+				<b></b>
+			</div>
+		</div>
+		<div class="video1 clear ">
+			<div class="lf">
+				<img src="images/170314150544967.jpg" alt=""/>
+			</div>
+			<div class="bgColor">
+				<h2 class="lf">Steam周末特惠：2K折扣周，《恐怖黎明》5折</h2>
+				<span >2017-2-16 11:07</span>
+				<b></b>
+			</div>
+		</div>
+		<div class="video1 clear " style="margin-left:100px;">
+			<div class="lf">
+				<img src="images/170314115422413.jpg" alt=""/>
+			</div>
+			<div class="bgColor">
+				<h2 class="lf">2016年主机市场分析：索尼占据半壁河山</h2>
+				<span >2017-2-16 11:07</span>
+				<b></b>
+			</div>
+		</div>
+		<div class="video1 clear " >
+			<div class="lf">
+				<img src="images/170314112523295.jpg" alt=""/>
+			</div>
+			<div class="bgColor">
+				<h2 class="lf">2016年主机市场分析：索尼占据半壁河山</h2>
+				<span >2017-2-16 11:07</span>
+				<b></b>
+			</div>
+		</div>
+		<div class="video1 clear " style="margin-left:100px ">
+			<div class="lf">
+				<img src="images/170317105702175.jpg" alt=""/>
+			</div>
+			<div class="bgColor">
+				<h2 class="lf">《莎木3》公布新影像 QTE判定依旧严格</h2>
+				<span >2017-2-16 11:07</span>
+				<b></b>
+			</div>
+		</div>
+	</div>
+		<div id="paihang_xbox">
+			<div class="paihang1">
+				<b></b>
+				<p>热门PS4游戏</p>
+			</div>
+			<ul>
+				<li>
+					<div class="arrow">
+						<div>1</div>
+						<p></p>
+					</div>
+					<span>2016年游戏展望</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div>2</div>
+						<p></p>
+					</div>
+								<span>
+										2016年终策划——同行
+								</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div>3</div>
+						<p></p>
+					</div>
+								<span>
+										《血源诅咒》最速挑战
+								</span>
+				</li>
+				<li>
+					<div class="arrow" >
+						<div style="background-color:#C8C2BE">4</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>2016年城会玩集合</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div style="background-color:#C8C2BE">5</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>2016新游月谈2月番</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div style="background-color:#C8C2BE">6</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>劳拉与贝拉的荒野求生</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div style="background-color:#C8C2BE">7</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>游戏bug大集锦</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div style="background-color:#C8C2BE">8</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>hololens让你重新认识新世界</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div style="background-color:#C8C2BE">9</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>这可能是当今最好的竞速游戏了</span>
+				</li>
+				<li>
+					<div class="arrow">
+						<div style="background-color:#C8C2BE">10</div>
+						<p style="border-left:22px solid #C8C2BE;"></p>
+					</div>
+					<span>《潜龙谍影5：幻痛》真结局中文</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!--页面底部二维码-->
+	<footer id="foot_box">
+		<div class="foot_logo">
+			<div class="lf">
+				<img src="images/logo_foot.png" alt=""/>
+			</div>
+			<b></b>
+			<span>专业、严谨、有趣</span>
+			<i></i>
+			<img src="images/ucg.png" alt=""/>
+			<span class="s1">由热爱游戏的新老玩家组成，把关于电视游戏的一切分享给大家</span>
+		</div>
+		<div class="scan">
+			<div class="clear move_left">
+				<img src="images/weibo_code.jpg" alt=""/>
+				<span>微博</span>
+				<div class="line"></div>
+				<a href="#">http://weibo.com</a>
+			</div>
+			<div class=" move_right clear">
+				<img src="images/weibo_code.jpg" alt=""/>
+				<span>微博</span>
+				<div class="line"></div>
+				<a href="#">http://weibo.com</a>
+			</div>
+			<div class=" move_right1 clear">
+				<img src="images/weibo_code.jpg" alt=""/>
+				<span>微博</span>
+				<div class="line"></div>
+				<a href="#">http://weibo.com</a>
+			</div>
+		</div>
+		<div class="foot_info">
+			<span class="lf">VGTIME游戏时光@2015 沪ICP备15014524号-1</span>
+			<ul class="rf">
+				<li>
+					联系我们
+				</li>
+				<li>
+					<b></b>
+					关于我们
+				</li>
+				<li>
+					<b></b>
+					招聘信息
+				</li>
+				<li>
+					<b></b>
+					RSS阅读器
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<div class="modal"></div>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/regist.js"></script>
+ </body>
+</html>
